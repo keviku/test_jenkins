@@ -17,6 +17,6 @@ COPY gatsby .
 # RUN /bin/sh -c 'cd test'
 WORKDIR /app/gatsby
 RUN ["npm","install"]
-
+# this is a test
 
 CMD ["gatsby", "develop", "-H", "0.0.0.0"]
