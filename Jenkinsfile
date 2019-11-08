@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'ssh ec2-3-83-90-35.compute-1.amazonaws.com'
+                sh 'ssh -t -t ec2-3-83-90-35.compute-1.amazonaws.com'
                 sh 'cd test3_empty'
-                sh 'docker build -t -t test/gatsby .'
+                sh 'docker build -t test/gatsby .'
             }
         }
         stage('Deploy') {
